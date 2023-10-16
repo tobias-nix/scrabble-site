@@ -70,7 +70,7 @@ Es müssen die folgenden Produkte erstellt werden: Projekthandbuch, Besprechungs
 
 Für die Projektergebnisse sind die folgenden Abgabetermine vorgesehen:
 
-| Vorlesung | Praktikum | Produkt | Abgabetermin |
+| Vorlesung | Praktikum | Produkt | Abgabetermin ||
 | --- | --- | --- | --- | --- | 
 | 09.10.2023 | 11.10.2023 | Besprechungsprotokoll, Projekthandbuch                  | 17.10.2023 (8Uhr) |
 | 16.10.2023 | 18.10.2023 | Besprechungsprotokoll, Risikoliste                      | 24.10.2023 (8Uhr) |
@@ -143,7 +143,7 @@ Besteht kein Bedarf für ein Kundentreffen, dann muss dies mit dem Kunden abgesp
 
 ### Projektplan und Meilensteine
 
-| Termin | Schwerpunkt |
+| Termin | Schwerpunkt ||
 | --- | --- | --- | 
 | 11.10.2023 | Kickoff und erste Anforderungen                  |
 | 18.10.2023 | Anforderungen sammeln/aufschreiben               |
