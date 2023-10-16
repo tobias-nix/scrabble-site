@@ -1,92 +1,110 @@
-# scrabble-site
+> Universität der Bundeswehr München  
+> ETTI 6 Software Engineering / Softwaretechnik  
+> Prof. Dr. Andrea Baumann
 
+Dieses Projekt dient als Vorlage für die Dokumentation im Secure Software Engineering Praktikum. 
 
+# Inhaltsverzeichnis
 
-## Getting started
+[01_Besprechungsprotokolle](01_Besprechungsprotokolle/_Besprechungsprotokolle.md)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+[02_Projekthandbuch](02_Projekthandbuch/_Projekthandbuch.md)
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+[03_Risikoliste](03_Risikoliste/_Risikoliste.md)
 
-## Add your files
+[04_Anforderungsspezifikation](04_Anforderungsspezifikation/_Anforderungsspezifikation.md)
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+[05_Architekturdokument](05_Architekturdokument/_Architekturdokument.md)
+
+[06_Testspezifikation](06_Testspezifikation/_Testspezifikation.md)
+
+Im Verzeichnis [resources](resources) findet sich weitere relevante Informationen, wie z.B. individuelle oder aktuelle Visual Paradigm Modelle (https://www.visual-paradigm.com). 
+
+***Wichtige Hinweise für das Schreiben von Dokumenten mit Markdown***
+
+Markdown (https://daringfireball.net/projects/markdown/ oder auf deutsch https://markdown.de) ist eine 
+einfach Art formatierte Texte zu schreiben. Markdown geschrieben Texte werden z.B. in GitLab schon 
+formatiert angezeigt oder können z.B. nach `latex` oder `pdf` konvertiert werden. 
+
+Für die vorliegende Dokumentation bitte unbedingt folgende Regeln beachten, damit eine Konvertierung mit 
+Hilfe der vorgegebenen sogenannten [GitLab-Pipeline](.gitlab-ci.yml) in `pdf` Dokumente (einigermaßen) funktioniert. 
+
+- Für die Konvertierung in ein `pdf` werden alle `md`-Dateien in einem Verzeichnis in alphanumerischer Reihenfolge 
+aneinandergehängt und dann nach `pdf` konvertiert. Dateien mit einem `_` am Anfang werden ignoriert. Für jedes
+Verzeichnis wird ein `pdf` erzeugt. Es werden nur Verzeichnisse bearbeitet, die mit einer Ziffer `[0-9]` beginnen. 
+
+- Zwischen die aneinandergehängten Dateien wird jeweils ein Seitenumbruch und die Möglichkeit zur 
+Referenzierung ergänzt.
+
+- Es kann auf einen anderen Abschnitt innerhalb eines Dokuments verwiesen werden, indem man auf eine 
+Datei im selben Verzeichnis verweist (siehe Beispiel im Kapitel [Anwendungsfälle] 
+(04_Anforderungsspezifikation/06_00_Anwendungsfaelle)). Diese Verweise sind später im `pdf` navigierbar.
+
+- Als oberste Kapitelebene zwei Raute Zeichen `##` verwenden. Die erste Ebene `#` wird für das 
+Inhaltsverzeichnis ignoriert. 
+
+- ... *falls irgendetwas trotz Einhaltung diese Punkte nicht wie erwartet funktioniert, dann bitte 
+unbedingt über `Mattermost` oder per Mail melden und nicht die Zeit mit Formatierung verschwenden!*
+
+***Wichtige Hinweise für den Ablauf der GitLab-Pipeline***
+
+Nach einem `push` auf das Repository wird der Job `site_build` der GitLab-Pipeline automatisch ausgeführt. 
+Dieser Job wandelt mit Hilfe der Anwendung `pandoc` die `md`-Dateien in `pdf`-Dateien um und kopiert 
+diese und im Verzeichnis vorhandene Dateien vom Typ `xlsx`, `ods`, `doc` und `pdf` in einen 
+Ordner.
+
+Die Ergebnisse der Umwandlung finden Sie, nachdem der Job beendet wurde, in GitLab. 
+Zum Beispiel unter `Build` -> `Pipelines`, neben der obersten bzw. neuesten `passed` Pipeline ganz rechts auf 
+das Download-Symbol klicken und `site_build:archive` auswählen. Oder auf `passed`, dann auf `site_build` und 
+dann auf den `Browse` klicken um sich die Artefakte im Browser anzuschauen.
+
+Der beiden Jobs `site_upload`und `site_release` der Pipeline werden durch das Anlegen eines neuen 
+`Tag` zusätzlich zum Job `site_build` angestoßen. Der Job `site_upload` zipped die erzeugten Artefakte 
+und legt das zip-File in der `generic`-Package Registry ab. Der Job `site_build` erzeugt ein Release.
+
+Wenn Sie alle Dokumente für eine wöchentliche Abgabe fertig haben, dann erzeugen also einfach ein `Tag`.
+
+*Tritt in der Pipeline ein Fehler auf, dann erhalten Sie von GitLab eine Mail. Falls Sie den Fehler 
+nicht selbst beheben können, dann geben Sie bitte über `Mattermost` oder per Mail Bescheid. Bitte
+nicht zulange damit beschäftigen und so Zeit verschwenden!*
+
+***Die GitLab-Pipeline kann auch lokal ausgeführt werden (falls Sie sich dafür interessieren)***
+
+**Voraussetzung:** Docker muss installiert sein (siehe https://docs.docker.com), die folgenden Kommandos müssen im 
+VPN ausgeführt werden
+
+**Wichtig zu wissen:** Es wird die Version generiert, die bei Ihnen lokal liegt und `commit`ed wurde.
+
+1. Get image from docker and start gitlab-runner daemon in the repository's directory
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.dublin.etti.unibw-muenchen.de/edu-sse-2023-team-d/scrabble-site.git
-git branch -M main
-git push -uf origin main
+docker run -d --name gitlab-runner --restart always -v $PWD:$PWD -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:latest
 ```
 
-## Integrate with your tools
+2. Make working directory for gitlab-runner
 
-- [ ] [Set up project integrations](https://gitlab.dublin.etti.unibw-muenchen.de/edu-sse-2023-team-d/scrabble-site/-/settings/integrations)
+```
+mkdir -p gitlab-runner-dir
+mkdir -p gitlab-runner-dir/runner--project-0-concurrent-0
+```
 
-## Collaborate with your team
+3. Start executing job
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+```
+docker exec -it -w $PWD gitlab-runner gitlab-runner exec docker site_build --cache-dir="$PWD"/gitlab-runner-dir --docker-cache-dir="$PWD"/gitlab-runner-dir --docker-volumes="$PWD"/gitlab-runner-dir --builds-dir="$PWD"/gitlab-runner-dir
+```
 
-## Test and Deploy
+4. Copy results to target directory
 
-Use the built-in continuous integration in GitLab.
+```
+mkdir -p  target
+cp gitlab-runner-dir/*/*/*/*/_generated/* target/.
+rm -rf gitlab-runner-dir
+```
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+5. Stop gitlab-runner daemon and remove container
 
-***
+```
+docker stop gitlab-runner && docker rm gitlab-runner
+```
 
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.

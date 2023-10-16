@@ -1,0 +1,79 @@
+default: 
+  tags: [edu-sse]
+
+variables:
+  # printf "token-docker-pandoc-latex:nMs_-VtxRFtzEHyup2mD" | openssl base64 -A
+  DOCKER_AUTH_CONFIG: '{"auths":{"registry.dublin.etti.unibw-muenchen.de":{"auth":"dG9rZW4tZG9ja2VyLXBhbmRvYy1sYXRleDpuTXNfLVZ0eFJGdHpFSHl1cDJtRA=="}}}'
+
+
+stages:
+  - build
+  - upload
+  - release
+
+# job converts markdown to odf
+site_build:
+  stage:
+    build
+  image:
+    name: registry.dublin.etti.unibw-muenchen.de/edu-sse/docker-pandoc-latex:ht2023.01
+    entrypoint: [""]
+  script:
+    # show version of pandoc
+    - /usr/local/pandoc/bin/pandoc --version
+    # generate result directory
+    - mkdir -p _generated
+    # copy all files with the given extensions to _generated 
+    - find . -regextype posix-extended -iregex '\./[0-9].*\.(xlsx|ods|doc|pdf)' -exec cp {} ./_generated/. \;
+    # list copied files
+    - ls -al ./_generated
+    # convert markdowns to pdf: 
+    # 1: insert new pages between files and try to add references by inserting hypertarget and hyperlink, 
+    # 2: run pandoc
+    # attention: only directories beginning with a number are processed, only files not beginning with _ are processed
+    - |
+      for d in [0-9]* ; do 
+        echo "$d" ;
+        cd $d ;
+        if [ $(ls [^_]*.md 2> /dev/null | wc -l) -gt 0 ]; then
+          for f in [^_]*.md ; do if [[ $f =~ "metadata" ]]; then cat $f; else sed -E '1s/^(.*)$/  \n   \n\\newpage  \n  \n\\hypertarget\{'${f}'\}\{}  \n  \n\1  \n  \n/' $f; fi; done | sed -E 's/\[([^]]*)\]\(([^)[]*\.md)\)/\\hyperlink\{\2\}\{\1\}/g' > _all.md ;  
+          /usr/local/pandoc/bin/pandoc _all.md --template /usr/local/eisvogel.latex --from markdown --to pdf -o ../_generated/${d}.pdf --shift-heading-level-by -1 -V colorlinks=true -V linkcolor=blue -V urlcolor=red -V toccolor=blue ; 
+        fi ;
+        cd .. ; 
+      done
+    # list all generated files
+    - ls -al ./_generated
+  artifacts:
+    paths:
+      - "_generated"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+
+site_upload:
+  needs:
+  - job: site_build
+    artifacts: true
+  stage: upload
+  image: registry.gitlab.com/gitlab-ci-utils/curl-jq:latest
+  script:
+    # go to artifact directory and zip artifacts
+    - cd _generated 
+    - zip -r ${CI_COMMIT_TAG}-documents.zip *
+    - echo 'Documentation zipped!'
+    # upload zip to generic package repository
+    - 'curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file ${CI_COMMIT_TAG}-documents.zip "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/documents/$CI_COMMIT_TAG/${CI_COMMIT_TAG}-documents.zip"'
+    - echo 'Documentation uploaded!'
+  rules:
+    - if: $CI_COMMIT_TAG
+
+site_release:
+  needs:
+  - job: site_upload
+    artifacts: true
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  script:
+    # create release 
+    - release-cli create --name "Release $CI_COMMIT_TAG" --tag-name $CI_COMMIT_TAG --assets-link "{\"name\":\"${CI_COMMIT_TAG}-documents.zip\",\"url\":\"${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/documents/$CI_COMMIT_TAG/${CI_COMMIT_TAG}-documents.zip\"}"
+  rules:
+    - if: $CI_COMMIT_TAG
