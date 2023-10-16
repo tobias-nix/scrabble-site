@@ -1,5 +1,4 @@
->TESTE TEST TEST 
-Universität der Bundeswehr München  
+> Universität der Bundeswehr München  
 > ETTI 6 Software Engineering / Softwaretechnik  
 > Prof. Dr. Andrea Baumann
 
