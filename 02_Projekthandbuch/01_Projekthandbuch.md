@@ -4,7 +4,7 @@
 | Version | Status    | Datum      | Autor | Erläuterung                               |
 |---------|-----------|------------|-------|-------------------------------------------| 
 | 0.1     | In Arbeit | 14.10.2023 | Nerb  | Alle Kapitel ohne Dokumentation/Ablage    |
-| 1.0     | Final     | 16.10.2023 | Nerb  | Grundlagen des Projekthandbuchs eintragen |
+| 1.0     | Final     | 16.10.2023 | Nerb  | fertig gestellt |
 
 
 
