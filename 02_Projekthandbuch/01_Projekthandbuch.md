@@ -1,14 +1,16 @@
 # Projekthandbuch Scrabble  
 
 ## Historie
-| Version | Status | Datum | Autor | Erläuterung |
-| --- | --- | --- | --- | --- | 
-| 0.1 | In Arbeit | 14.10.2023 | Nerb | Grundlagen des Projekthandbuchs eintragen | 
+| Version | Status    | Datum      | Autor | Erläuterung                               |
+|---------|-----------|------------|-------|-------------------------------------------| 
+| 0.1     | In Arbeit | 14.10.2023 | Nerb  | Alle Kapitel ohne Dokumentation/Ablage    |
+| 1.0     | Final     | 16.10.2023 | Nerb  | Grundlagen des Projekthandbuchs eintragen |
+
 
 
 ## Zusammenfassung
 
-Das Projekthandbuch enthält alle notwendigen Informationen zum Projekt Scrabble und ist der Einstieg in das Projekt. Hier finden sich alle organisatorischen Informationen und Verweise auf notwengige Dokument. Außerdem wird das Projekt und der Projektkontext beschrieben.
+Das Projekthandbuch enthält alle notwendigen Informationen zum Projekt Scrabble und ist der Einstieg in das Projekt. Hier finden sich alle organisatorischen Informationen und Verweise auf notwendige Dokument. Außerdem wird das Projekt und der Projektkontext beschrieben.
 
 ## Einleitung
 
@@ -16,7 +18,7 @@ Zuerst wird der Zweck des Dokuments vorgestellt. Im Anschluss wird der redaktion
 
 ###	Zweck des Dokuments 
 
-Das Projekthandbuch beschreibt das Projekt Scrabble und ist der Einstieg in die gesamte Dokumentation des Projekts. Es bietet einen Einleitung in das Projekt und informiert über die Rahmenbedingungen, die Projektorganisation sowie Planungen des Projektes. Das Dokument wird bei Bedarf im Projektverlauf aktualisiert. Zusätzlich sei darauf hingeweiesen, das das Projekthandbuch den Zughang zu sämtlichen für die Durchführung des Projekts relevanten Dokumente und Informationen beschreibt.
+Das Projekthandbuch beschreibt das Projekt Scrabble und ist der Einstieg in die gesamte Dokumentation des Projekts. Es bietet eine Einleitung in das Projekt und informiert über die Rahmenbedingungen, die Projektorganisation sowie Planungen des Projektes. Das Dokument wird bei Bedarf im Projektverlauf aktualisiert. Zusätzlich sei darauf hingewiesen, das das Projekthandbuch den Zughang zu sämtlichen für die Durchführung des Projekts relevanten Dokumente und Informationen beschreibt.
 
 
 ###	Redaktion
@@ -29,7 +31,7 @@ Verantwortlich für die Pflege des Projekthandbuchs ist der Projektleiter. Ände
 
 ### Vorgeschichte 
 
-Der Scrabble e. V. verfügt bisher nicht über die Möglichkeit, Scrabblespiele online auszutragen. Für diese Zwecke wurden stets Video- Gruppenchats verwendet, in denen ein Spieler das Brettspiel live übertrug. Zusätzlich mussten die Statistiken von den Gruppenmitgliedern manuell erfasst werden.
+Der Scrabble e. V. verfügt bisher nicht über die Möglichkeit, Scrabblespiele online auszutragen. Für diese Zwecke wurden stets Video-Gruppenchats verwendet, in denen ein Spieler das Brettspiel live übertrug. Zusätzlich mussten die Statistiken von den Gruppenmitgliedern manuell erfasst werden.
 
 Ein erstes Kundengespräch hat am 11.10.2023 stattgefunden. Das Gesprächsprotokoll befindet sich im Ordner 01_Besprechungsprotokoll. 
 
@@ -39,18 +41,18 @@ Die Anwendung Scrabble ist eine Server-Client-Applikation, die mithilfe von Java
 
 ###	Vertragsbasis
 
-Das Projekt wird im Rahmen des Moduls „Secure Software Engineering“ erstellt. Es gelten die folgenden Rahmenbedingungen:
+Das Projekt wird im Rahmen des Moduls „Secure Software-Engineering“ erstellt. Es gelten die folgenden Rahmenbedingungen:
 
 * Der wichtigste Bestandteil der Portfolio-Prüfung, da ein komplettes Software-Projekt im Team durchgeführt wird und Ihre Rolle im Team und die erstellten Produkte in die Bewertung einfließen.
 * Aufteilung in Entwicklungsteams mit je 4-5 Teammitgliedern.
 * Die Teams werden von Antje Neve und Andrea Baumann betreut. Der dem Team zugehörige Betreuer ist gleichzeitig der Kunde bzw. der Auftraggeber.
 * Sie erhalten i.A. wöchentlich montags in der Vorlesung neue Aufgabenblätter, auf denen die vom Team zu erledigenden Aufgaben beschrieben sind. Diese Aufgabenblätter werden auch auf Ilias zur Verfügung gestellt.
 * Pro Woche gibt es ein Treffen im Team mit Ihrer Betreuerin. Die Teams sollten sich nach Bedarf auch außerhalb dieses Termins treffen. 
-* Jedes Team übernimmt eigenständig die Aufgabenplanung und Projektdokumentation. Planen Sie wer für welche Aufgaben zuständig ist und wer für welche Produkte zuständig ist. 
+* Jedes Team übernimmt eigenständig die Aufgabenplanung und Projektdokumentation. Planen Sie, wer für welche Aufgaben zuständig ist und wer für welche Produkte zuständig ist. 
 * Ihrer wöchentlichen Ergebnisse/Produkte werden beurteilt. Dazu gibt es zu den einzelnen Produkten Kontrollfragen, die wir zur Beurteilung und Sie zur Kontrolle Ihrer Ergebnisse verwenden.
-* Alle erstellten Dokumente und Spurcecode müssen auf GitLab abgelegt werden: https://gitlab.dublin.etti.unibw.de 
+* Alle erstellten Dokumente und Sourcecode müssen auf GitLab abgelegt werden: https://gitlab.dublin.etti.unibw.de 
 * Ein komplettes Software-Projekt in so wenig Zeit durchzuführen ist eine große Herausforderung. Deswegen wird selbständiges Arbeiten und zeitnahe Kommunikationsbereitschaft bei auftretenden Problemen erwartet.
-* Wieviele Punkte Sie für das Praktikum und die erstellen Produkte bekommen, hängt von den Teamtreffen, der Dokumentation und dem Sourcecode auf dem GitLab-Server ab.
+* Wie viele Punkte Sie für das Praktikum und die erstellten Produkte bekommen, hängt von den Teamtreffen, der Dokumentation und dem Sourcecode auf dem GitLab-Server ab.
 
 Die Bewertung der Ergebnisse findet unter den folgenden Bedingungen statt:
 
@@ -70,8 +72,8 @@ Es müssen die folgenden Produkte erstellt werden: Projekthandbuch, Besprechungs
 
 Für die Projektergebnisse sind die folgenden Abgabetermine vorgesehen:
 
-| Vorlesung | Praktikum | Produkt | Abgabetermin ||
-| --- | --- | --- | --- | --- | 
+| Vorlesung  | Praktikum  | Produkt                                                 | Abgabetermin      |
+| ---------- | ---------- | ------------------------------------------------------- | ----------------- |
 | 09.10.2023 | 11.10.2023 | Besprechungsprotokoll, Projekthandbuch                  | 17.10.2023 (8Uhr) |
 | 16.10.2023 | 18.10.2023 | Besprechungsprotokoll, Risikoliste                      | 24.10.2023 (8Uhr) |
 | 23.10.2023 | 25.10.2023 | Besprechungsprotokoll, Anforderungsspezifikation        | 30.10.2023 (8Uhr) |
@@ -85,7 +87,7 @@ Für die Projektergebnisse sind die folgenden Abgabetermine vorgesehen:
 
 ###	Informelle Ziele des Projektes
 
-Die Projektbeteiligten sollen den Software Engineering Prozess und die wichtigsten Produkte der Softwareerstellung kennenlernen.
+Die Projektbeteiligten sollen den Softwareengineering Prozess und die wichtigsten Produkte der Softwareerstellung kennenlernen.
 
 ### Sonstige Besonderheiten
 
@@ -97,19 +99,19 @@ Die Risiken und Maßnahmen finden sich in der Datei Risikoliste im Ordner 03_Ris
 
 ###	Teamaufbau
 
-| Name | Rolle | Erreichbarkeit |
-| --- | --- |  --- |
-| Nerb              | Projektleiter             | simon.nerb@unibw.de          |
-| Kompalka          | Anfoderungsanalyst        | jonas.kompalka@unibw.de      |
-| Bößendörfer    | Fachliche Chefdesignerin  | anna.boessendoerfer@unibw.de |  
-| Nix               | Testmanager               | tobias.nix@unibw.de          |
-| Seegerer          | Systemarchitekt           | gabriel.seegerer@unibw.de    | 
+| Name            | Rolle                    | Erreichbarkeit               |
+|-----------------|--------------------------|------------------------------|
+| Nerb            | Projektleiter            | simon.nerb@unibw.de          |
+| Kompalka        | Anforderungsanalyst      | jonas.kompalka@unibw.de      |
+| Bößendörfer     | Fachliche Chefdesignerin | anna.boessendoerfer@unibw.de |  
+| Nix             | Testmanager              | tobias.nix@unibw.de          |
+| Seegerer        | Systemarchitekt          | gabriel.seegerer@unibw.de    | 
 
 Die Aufgaben der Teammitglieder entsprechend ihren Rollen sind wie folgt:
 
 * **Anforderungsanalyst** und **fachlicher Chefdesigner**: Verantwortlich für das Anforderungsmanagement
     * Verantwortlich für die Anforderungsspezifikation: was soll das System leisten. • Wenn die Anforderungsspezifikation gut geschrieben ist, kann daraus mit relativ wenig Aufwand eine Benutzerdokumentation erstellt werden oder sogar direkt verwendet werden.
-    * Der fachlicher Chefdesigner ist insbesondere für das fachliche Datenmodell verantwortlich.
+    * Der fachliche Chefdesigner ist insbesondere für das fachliche Datenmodell verantwortlich.
     *  Anforderungsanalyst und fachlicher Chefdesigner in Personalunion bei weniger als 5 Teammitgliedern.
 * **Systemarchitekt** und Entwicklungsteamleiter: Verantwortlich für die Systemarchitektur und die Umsetzung in Software
     * Verantwortlich für das Architekturdokument: Wie soll das System umgesetzt werden.
@@ -122,13 +124,13 @@ Die Aufgaben der Teammitglieder entsprechend ihren Rollen sind wie folgt:
 * **Projektleiter**: Verantwortlich für den Projektablauf
     * Festsetzung der Projektstruktur und der Spielregeln im Projekthandbuch
     * Protokolliert den Kundenkontakt und plant den zeitlichen Ablauf und den Einsatz der Ressourcen und Teammitglieder. Die Ergebnisse werden in Besprechungsprotokollen festgehalten.
-    * Protokolliert die Risiken des Projekts in der Risikoliste. Jedes Teammitglied ist natürlich nicht nur in seiner Rolle tätig, d.h. auch der Projektleiter kann als Software-Entwickler oder zum Testen eingeplant werden. „Verantwortlich" ist bitte nicht mit „arbeitet alleine" gleichzusetzten.
+    * Protokolliert die Risiken des Projekts in der Risikoliste. Jedes Teammitglied ist natürlich nicht nur in seiner Rolle tätig, d.h. auch der Projektleiter kann als Software-Entwickler oder zum Testen eingeplant werden. „Verantwortlich" ist bitte nicht mit „arbeitet alleine" gleichzusetzen.
 
 ### Zusammenarbeit mit dem Kunden 
 
 Der Projektleiter ist der Hauptansprechpartner für den Kunden. Alle Gespräche bzw. Absprachen mit dem Kunden müssen protokolliert werden. Die Protokolle müssen von beiden Seiten abgenommen werden.
 
-Alle Mails und Dokumente müssen erst durch die Projektleitung frei gegeben werden, bevor diese an den Kunden verschickt werden.
+Alle Mails und Dokumente müssen erst durch die Projektleitung freigegeben werden, bevor diese an den Kunden verschickt werden.
 
 Auf der Kundenseite steht und Frau Prof. Baumann (andrea.baumann@unibw.de) zur Verfügung.
 
@@ -143,8 +145,8 @@ Besteht kein Bedarf für ein Kundentreffen, dann muss dies mit dem Kunden abgesp
 
 ### Projektplan und Meilensteine
 
-| Termin | Schwerpunkt ||
-| --- | --- | --- | 
+| Termin     | Schwerpunkt                                      |
+| -----------| ------------------------------------------------ | 
 | 11.10.2023 | Kickoff und erste Anforderungen                  |
 | 18.10.2023 | Anforderungen sammeln/aufschreiben               |
 | 25.10.2023 | Anforderungsspezifikationen fertigstellen        |
@@ -170,17 +172,18 @@ Im gesamten Projektverlauf ist auf eine saubere und konsistente Ablage aller ers
 Alle Daten werden in einem Versionsverwaltungssystem gespeichert. Dabei gibt es zwei zentrale Projekte.
 
 **Dokumentation** über GitLab auf ein zentrales Git-Repository: 
-  https://gitlab.dublin.etti.unibw-muenchen.de/edu-sse-2023-team-d/scrabble-site.git    
-  Hier wird die gesamte Dokumentation gespeichert, die mit Markdown und Excel erstellt wurden.
+https://gitlab.dublin.etti.unibw-muenchen.de/edu-sse-2023-team-d/scrabble-site.git 
+Hier wird die gesamte Dokumentation gespeichert, die mit Markdown und Excel erstellt wurden.
 
 **Sourcecode** über GitLab auf ein zentrales Git-Repository: : 
-https://gitlab.dublin.etti.unibw-muenchen.de/edu-sse-2023-team-d/scrabble-src.git   
-Hier wird der entwickelte Sourcecode gespeichert. Sowohl die Client- als auch die Sever-Enwicklung.
+https://gitlab.dublin.etti.unibw-muenchen.de/edu-sse-2023-team-d/scrabble-src.git 
+Hier wird der entwickelte Sourcecode gespeichert. Sowohl die Client- als auch die Sever-Entwicklung.
 
 Zur **Dokumentation** des Projekts mit Markdown:
 https://code.visualstudio.com
 
-Zur **Programmierung** des Projektes  mit Java:  https://www.jetbrains.com/idea/
+Zur **Programmierung** des Projektes mit Java:
+https://www.jetbrains.com/idea/
 
 Zur **Kommunikation mit dem Kunden**:
 https://mattermost.dublin.etti.unibw-muenchen.de/edu-se/channels/secure-software-engineering
@@ -189,10 +192,11 @@ Zur **teaminternen Kommunikation**:
 https://discord.com/invite/R2KxFX3U 
 https://mattermost.com 
 
-Zur Bearbeitung von **UML Diagramm**:
+Zur Bearbeitung von **UML-Diagramm**:
 https://www.visual-paradigm.com
 
-Designentwurf der **Oberflächen**:  https://www.drawio.com       
+Designentwurf der **Oberflächen**: 
+https://www.drawio.com       
 
 ## Referenzliste
 
