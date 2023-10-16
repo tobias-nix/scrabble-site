@@ -1,6 +1,6 @@
 ---
-title: "Projekthandbuch Projektname"
-author: "Autor:in"
+title: "Projekthandbuch Scrabble"
+author: "Nerb"
 titlepage: true
 pagestyle: "headings"
 toc: true
