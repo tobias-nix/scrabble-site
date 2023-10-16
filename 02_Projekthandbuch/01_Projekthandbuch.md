@@ -165,10 +165,10 @@ In unserem Projekt gibt es keine besonderen Datenschutzrichtlinien die beachtet 
 Im gesamten Projektverlauf ist auf eine saubere und konsistente Ablage aller erstellten Produkte und relevanten Dokumente zu achten.
 Alle Daten werden in einem Versionsverwaltungssystem gespeichert. Dabei gibt es zwei zentrale Projekte.
 
-Dokumentation: ... 
+Dokumentation: https://gitlab.dublin.etti.unibw-muenchen.de/edu-sse-2023-team-d/scrabble-site.git
 Hier wird die gesamte Dokumentation gespeichert, die mit Markdown und Excel erstellt wurden.
 
-Sourcecode: ...
+Sourcecode: https://gitlab.dublin.etti.unibw-muenchen.de/edu-sse-2023-team-d/scrabble-src.git
 Hier wird der entwickelte Sourcecode gespeichert. Sowohl die Client- als auch die Sever-Enwicklung
 
 Zur Dokumentation des Projekts mit Markdown: https://code.visualstudio.com
