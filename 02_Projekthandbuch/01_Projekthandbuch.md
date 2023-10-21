@@ -1,10 +1,11 @@
 # Projekthandbuch Scrabble  
 
 ## Historie
-| Version | Status    | Datum      | Autor | Erläuterung                               |
-|---------|-----------|------------|-------|-------------------------------------------| 
-| 0.1     | In Arbeit | 14.10.2023 | Nerb  | Alle Kapitel ohne Dokumentation/Ablage    |
-| 1.0     | Final     | 16.10.2023 | Nerb  | fertig gestellt |
+| Version | Status    | Datum      | Autor | Erläuterung                            |
+|---------|-----------|------------|-------|----------------------------------------| 
+| 0.1     | In Arbeit | 14.10.2023 | Nerb  | Alle Kapitel ohne Dokumentation/Ablage |
+| 1.0     | Final     | 16.10.2023 | Nerb  | fertig gestellt                        | 
+| 1.1     | Final     | 16.10.2023 | Nerb  | korrigiert                             |
 
 
 
@@ -37,7 +38,7 @@ Ein erstes Kundengespräch hat am 11.10.2023 stattgefunden. Das Gesprächsprotok
 
 ###	Inhaltliche Kurzdarstellung
 
-Die Anwendung Scrabble ist eine Server-Client-Applikation, die mithilfe von Java realisiert wird. Server und Client kommunizieren über RMI. Die Anwendung ermöglicht es Spieler:innen das Brettspiel Scrabble online, gemäß den allgemeinen Regeln zu spielen. Die Spieler:innen haben die Möglichkeit entweder eine Spielsitzung zu erstellen und diese für andere Mitspieler freizugeben.
+Die Anwendung Scrabble ist eine Server-Client-Applikation, die mithilfe von Java realisiert wird. Server und Client kommunizieren über RMI. Die Anwendung ermöglicht es Spieler:innen das Brettspiel Scrabble online, gemäß den allgemeinen Regeln zu spielen. Die Spieler:innen haben die Möglichkeit eine Spielsitzung zu erstellen und diese für andere Mitspieler freizugeben.
 
 ###	Vertragsbasis
 
@@ -146,7 +147,7 @@ Besteht kein Bedarf für ein Kundentreffen, dann muss dies mit dem Kunden abgesp
 ### Projektplan und Meilensteine
 
 | Termin     | Schwerpunkt                                      |
-| -----------| ------------------------------------------------ | 
+|------------| ------------------------------------------------ | 
 | 11.10.2023 | Kickoff und erste Anforderungen                  |
 | 18.10.2023 | Anforderungen sammeln/aufschreiben               |
 | 25.10.2023 | Anforderungsspezifikationen fertigstellen        |
@@ -156,7 +157,7 @@ Besteht kein Bedarf für ein Kundentreffen, dann muss dies mit dem Kunden abgesp
 | 22.11.2023 | JUnit-Test erstellen/Implementierung beginnen    |
 | 29.11.2023 | Implementierung fertigstellen                    |
 | 06.12.2023 | Integration und Abnahme/Touch-down vorbereiten   |
-| 12.12.2023 | Touch-down: Projekt abschließen                  |
+| 11.12.2023 | Touch-down: Projekt abschließen                  |
 
 ### Restaufwandschätzung
 
@@ -169,6 +170,7 @@ In unserem Projekt gibt es keine besonderen Datenschutzrichtlinien die beachtet 
 ## Dokumentation und Ablage
 
 Im gesamten Projektverlauf ist auf eine saubere und konsistente Ablage aller erstellten Produkte und relevanten Dokumente zu achten.
+Um die Freigabe der entsprechenden Ordnerstrukturen zu erhalten, bitten wir Sie, sich an den Projektleiter zu wenden.
 Alle Daten werden in einem Versionsverwaltungssystem gespeichert. Dabei gibt es zwei zentrale Projekte.
 
 **Dokumentation** über GitLab auf ein zentrales Git-Repository: 
