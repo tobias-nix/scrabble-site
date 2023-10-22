@@ -1,9 +1,8 @@
 
-# Risikoliste *`<`Projektname`>`*
+# Risikoliste Scrabble
 
 > Hinweis: Dies ist nur eine Übersicht für GitLab. Dateien, die mit `_` beginnen werden bei der Erstellung 
 > der pdf-Dateien nicht berücksichtigt! 
 
 Wichtige Unterlagen und Links:  
-- [Risikoliste](03_Risikoliste.xlsx) 
-- ... 
+- [Risikoliste](03_Risikoliste.xlsx)
