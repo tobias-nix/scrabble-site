@@ -27,7 +27,7 @@
 | 15     | A   | Beschreibung der Aktionen und Klassen im fachl. Datenmodell falls Zweck nicht gleich ersichtl. | 23.10. | Bößendörfer    |
 | 16     | A   | Die maximale Wortlänge wird aufgrund der Spielfeldgröße auf 15 Buchstaben beschränkt           | -      | -              |  
 | 17     | A   | Jeder schreibt die laut Liste aufgeteilten Anwendungfälle bis zum nächsten Termin              | 23.10. | Kompalka       |
-| 18     | I   | ![Tafelanschrieb](../resources/Tafelanschrieb_18.10.jpeg)                                      |        |                |
+| 18     | I   | ![Tafelanschrieb](../resources/protokoll/02_Tafelanschrieb_18.10.jpeg)                                      |        |                |
 
 **Abkürzungen**  
 I: Information, F: Feststellung, B: Beschluss, A: Auftrag

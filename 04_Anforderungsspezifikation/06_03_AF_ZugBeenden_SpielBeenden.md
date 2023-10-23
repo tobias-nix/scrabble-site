@@ -1,14 +1,15 @@
 ### AF Zug beenden (Nix)
 
-// Kurze Erklärung
+Mit diesem AF kann ein Spieler seinen Zug beenden und auch das Ende eines Spiels auslösen.
 
-**Akteur**:
+**Akteur**: Spieler
 
-**Auslöser**:
+**Auslöser**: Ein Spieler möchte seinen Zug beenden.
 
-**Vorbedingungen**:
+**Vorbedingungen**: Spieler muss am Spiel teilnehmen, Spieler muss der aktive Spieler sein, 
+muss eine Aktion (pass, switch, place) ausgeführt haben
 
-**Häufigkeit**:
+**Häufigkeit**: 150-mal pro Spiel
 
 ![Aktivitätsdiagramm AF Zug beenden]
 
